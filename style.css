@@ -101,6 +101,14 @@ h1 {
   left: 10px;
 }
 
+.sentence {
+  margin: 0;
+  position: absolute;
+  top: 9px;
+  width: 100px;
+  left: 300px;
+}
+
 .words {
   margin: 0;
   position: absolute;
