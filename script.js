@@ -18,7 +18,7 @@ function getData() {
 }
 
 function getTime() {
-    let sec = 50;
+    let sec = 0;
     let min = 0;
 
     setInterval(() => {
@@ -222,7 +222,7 @@ function getTime() {
 
             setTimeout(() => {
                 rightWrongContainer.innerHTML = "";
-            }, 59000);
+            }, 55000);
 
             // create statistic
 
@@ -236,6 +236,8 @@ function getTime() {
             `;
 
             container.appendChild(div);
+
+            words = "";
         }
     }, 1000);
 }
