@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
 .container {
@@ -65,6 +66,7 @@ h1 {
   border-radius: 7px;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
+  background-color: transparent;
 }
 
 .textarea::placeholder {
@@ -145,11 +147,11 @@ h1 {
 
 /* right and wrong */
 
-.after-word-container {
+.after-right-word-container {
   position: absolute;
   left: 100px;
   top: 10px;
-  width: 1700px;
+  width: 850px;
   height: 200px;
   display: flex;
 }
@@ -159,12 +161,6 @@ h1 {
   border-radius: 7px;
   width: 840px;
   margin-right: 20px;
-}
-
-.after-wrong-word {
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 7px;
-  width: 840px;
 }
 
 .text-right-word {
@@ -178,6 +174,21 @@ h1 {
   word-wrap: break-word;
 }
 
+.after-wrong-word-container {
+  position: absolute;
+  right: 100px;
+  top: 10px;
+  width: 850px;
+  height: 200px;
+  display: flex;
+}
+
+.after-wrong-word {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  width: 840px;
+}
+
 .text-wrong-word {
   margin: 0;
   margin-top: 20px;
@@ -188,5 +199,11 @@ h1 {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
-
 /* hyphens: auto; */
+
+.wave {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  transform: scale(3);
+}
