@@ -143,45 +143,50 @@ h1 {
   border-radius: 7px;
 }
 
+/* right and wrong */
+
 .after-word-container {
   position: absolute;
-  right: 70px;
-  width: 400px;
-  height: 650px;
+  left: 100px;
+  top: 10px;
+  width: 1700px;
+  height: 200px;
+  display: flex;
 }
 
 .after-right-word {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 7px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 325px;
+  width: 840px;
+  margin-right: 20px;
 }
 
 .after-wrong-word {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 7px;
-  position: absolute;
-  top: 325px;
-  left: 0;
-  height: 325px;
-}
-
-.h1-right-word {
-  line-height: 40px;
-}
-
-.h1-wrong-word {
-  line-height: 40px;
+  width: 840px;
 }
 
 .text-right-word {
-  font-size: 20px;
-  margin-left: 20px;
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 33px;
+  margin-right: 33px;
+  letter-spacing: 2px;
+  line-height: 35px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .text-wrong-word {
-  font-size: 20px;
-  margin-left: 20px;
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 33px;
+  margin-right: 33px;
+  letter-spacing: 2px;
+  line-height: 35px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
+
+/* hyphens: auto; */

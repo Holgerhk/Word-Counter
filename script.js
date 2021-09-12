@@ -1,11 +1,14 @@
 const input = document.querySelector("textarea");
 const time = document.querySelector(".time-box");
 const container = document.querySelector(".info-container");
+const rightWrongContainer = document.querySelector(".after-word-container");
 
 let check = true;
 const allWords = ["Far", "far", "away,", "behind", "the", "word", "mountains,", "for", "from", "the",
-"countries", "Vokalia", "and", "Consonantia,", "there", "live", "the", "blind", "texts", "Separated",
-"they", "live", "in", "Bookmarksgrove", "right", "at", "coast", "of", "the", "Semantics,", "a", "large"];
+"countries", "Vokalia", "and", "Consonantia,", "there", "live", "the", "blind", "texts.", "Separated",
+"they", "live", "in", "Bookmarksgrove", "right", "at", "coast", "of", "the", "Semantics,", "a", "large."];
+let correctWords = [];
+let wrongWords = [];
 
 function getData() {
     if (check === true) {
@@ -15,7 +18,7 @@ function getData() {
 }
 
 function getTime() {
-    let sec = 0;
+    let sec = 50;
     let min = 0;
 
     setInterval(() => {
@@ -47,9 +50,6 @@ function getTime() {
                 <p class="time">${min}:0${sec}</p>
                 `;
             }
-
-            let correctWords = [];
-            let wrongWords = [];
 
             const data = document.querySelector("textarea").value;
             const realData = data.split(" ");
@@ -191,9 +191,40 @@ function getTime() {
                         break;
                 }
             });
+
+            let correctFullWords = correctWords.join("/");
+            let wrongFullWords = wrongWords.join("/");
             console.log(correctWords);
             console.log(wrongWords);
+            console.log(correctFullWords);
+            console.log(wrongFullWords);
+            
+            // create boxes
 
+            const box1 = document.createElement("div");
+            box1.classList.add("after-right-word");
+
+            box1.innerHTML = `
+                <h1>These are the words you got right</h1>
+                <p class="text-right-word">${correctFullWords}</p>
+            `;
+
+            const box2 = document.createElement("div");
+            box2.classList.add("after-wrong-word");
+
+            box2.innerHTML = `
+                <h1>These are the words you got wrong</h1>
+                <p class="text-wrong-word">${wrongFullWords}</p>
+            `;
+
+            rightWrongContainer.appendChild(box1);
+            rightWrongContainer.appendChild(box2);
+
+            setTimeout(() => {
+                rightWrongContainer.innerHTML = "";
+            }, 59000);
+
+            // create statistic
 
             const div = document.createElement("div");
             div.classList.add("info-box");
