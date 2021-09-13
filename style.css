@@ -207,3 +207,32 @@ h1 {
   bottom: 0;
   transform: scale(3);
 }
+
+.closed-container {
+  display: none;
+}
+
+/* buttons */
+
+.btn-container {
+  height: 50px;
+  width: 450px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 735px;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-color: #0099ff;
+  border-radius: 7px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.clicked {
+  display: none;
+}

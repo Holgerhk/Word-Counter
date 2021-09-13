@@ -7,8 +7,6 @@ let check = true;
 const allWords = ["Far", "far", "away,", "behind", "the", "word", "mountains,", "for", "from", "the",
 "countries", "Vokalia", "and", "Consonantia,", "there", "live", "the", "blind", "texts.", "Separated",
 "they", "live", "in", "Bookmarksgrove", "right", "at", "coast", "of", "the", "Semantics,", "a", "large."];
-let correctWords = [];
-let wrongWords = [];
 
 function getData() {
     if (check === true) {
@@ -18,8 +16,10 @@ function getData() {
 }
 
 function getTime() {
-    let sec = 0;
+    let sec = 50;
     let min = 0;
+    let correctWords = [];
+    let wrongWords = [];
 
     setInterval(() => {
         if (sec < 59) {
@@ -236,8 +236,6 @@ function getTime() {
             `;
 
             container.appendChild(div);
-
-            words = "";
         }
     }, 1000);
 }
