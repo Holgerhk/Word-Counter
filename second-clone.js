@@ -265,7 +265,7 @@ function getTimeThirty() {
                 time.innerHTML = `
                 <p class="time">0${min}:0${sec}</p>
                 `;
-            } else if (sec === 30) {
+            } else if (sec === 29 || sec === 58) {
                 sec++;
                 time.innerHTML = `
                 <p class="time">00${min}:${sec}</p>
@@ -455,7 +455,7 @@ function getTimeThirty() {
                 `;
             }
 
-        } else if (sec === 59) {
+        } else if (sec === 59) { 
 
             min++;
             if (min < 9) {
